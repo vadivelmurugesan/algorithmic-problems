@@ -23,7 +23,9 @@ public class BestTimeToBuyAndSellStock {
 			int todaysProfit = todaysPrice - minPrice;
 
 			// if today's profit is greater than max profit, then update max profit
-			if (todaysProfit > maxProfit) {
+			if (todaysPrice < minPrice) {
+				minPrice = todaysPrice;
+			} else if (todaysProfit > maxProfit) {
 				maxProfit = todaysProfit;
 			}
 
